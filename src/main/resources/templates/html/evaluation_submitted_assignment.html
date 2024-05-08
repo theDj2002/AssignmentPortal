@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>evaluation_submitted_assignment</title>
+  <style>
+    body{
+      margin: 0;
+      background-image: linear-gradient(to right top, #000000, #13080e, #1c101a, #221627, #231d36, #281f3c, #2d2041, #322247, #411c3e, #4c1632, #511325, #511616);
+      background-size: 100% 100%;
+      background-color: black;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      min-height: 100%;
+    }
+    #heading{
+      color: #fa5353;
+    }
+
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      opacity: .8;
+    }
+
+    th, td {
+      text-align: center;
+      padding: 8px;
+    }
+
+    tr{
+      border: 3px solid transparent;
+      background-color: whitesmoke;
+      margin: 10px;
+    }
+
+    th {
+      background-color: #333;
+      color: white;
+    }
+
+    .table-design tr:hover {
+      background-color: #ddd;
+    }
+
+  </style>
+</head>
+<body>
+
+<h1 id="heading">EVALUATE SUBMITTED ASSIGNMENT</h1>
+
+<table class="table-design">
+  <thead>
+  <tr>
+    <th>Student Name</th>
+    <th>Assignment Answer File</th>
+    <th>Comment</th>
+    <th>Mark</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="assignment : ${evaluationAssignmentList}">
+    <td th:text="${assignment.getStudent().std_name}"></td>
+    <td><a th:href="@{'/assignment_portal/teacher_assignment_file/' + ${assignment.assignment_file}}" target="_blank" th:text="'Download ' + ${assignment.assignment_name}"></a></td>
+    <td th:text="${assignment.comment}"></td>
+    <td>
+      <form th:action="@{/assignment_portal/marking}" method="post">
+        <input type="hidden" name="tch_id" th:value="${tch_id}">
+        <input type="hidden" name="assignment_id" th:value="${assignment.assignment_id}">
+        <input type="text" name="mark" th:value="${assignment.mark}">
+        <button type="submit">Update</button>
+      </form>
+
+
+      <!--<form action="#" th:action="@{/marking(tch_id=${tch_id}, assignment_id=${assignment.assignment_id})}" method="post" th:object="${assignment}">
+        <input type="text" th:field="*{mark}">
+        <button type="submit">update</button>
+      </form>-->
+    </td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

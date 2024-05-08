@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exam_portal</title>
+    <style>
+        body{
+            margin: 0;
+            background-image: linear-gradient(to right top, #000000, #13080e, #1c101a, #221627, #231d36, #281f3c, #2d2041, #322247, #411c3e, #4c1632, #511325, #511616);
+            background-size: 100% 100%;
+            background-color: black;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100%;
+        }
+        #heading{
+            font-size: 40px;
+            font-weight: bolder;
+            text-align: center;
+            border-radius: 10px;
+            width: 80%;
+            padding: 2%;
+            margin:auto;
+            color: #fa5353;
+        }
+        .register, .login{
+            /*text-align: center;*/
+            /*margin: auto;*/
+            padding: 1%;
+            border-radius: 15px;
+            display: inline-block;
+            background-color: #d3915d;
+            font-size: 20px;
+            width: 12%;
+            margin-top: 1%;
+            font-family:fantasy;
+            color: black;
+            text-decoration: none;
+        }
+        .login:hover, .register:hover{
+            color: #ff3f3f;
+            cursor: pointer;
+            background-color: #252424;
+        }
+
+        span{
+            font-family: "fantasy";
+            font-size: 30px;
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            color: grey;
+
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            border-right: .15em solid orange; /* The typwriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .15em; /* Adjust as needed */
+            animation:
+                    typing 3.5s steps(30, end),
+                    blink-caret .5s step-end infinite;
+        }
+        #std, #tch, #admin{
+            margin-top: 8%;
+            display: flex;
+            align-self: center;
+            /*margin: 0 auto;*/
+        }
+
+
+        /* The typing effect */
+        @keyframes typing {
+            from { width: 10% }
+            to { width: 70% }
+        }
+
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: grey }
+        }
+    </style>
+</head>
+<body>
+    <div id="heading"> WELCOME ASSIGNMENT PORTAL </div>
+
+    <div id="tch">
+        <span>If you are a teacher then go through the below options.</span>
+    </div>
+    <div style="margin: auto; text-align: center">
+        <a class="register" href="assignment_portal/load_teacher_registration_form" target="_blank" style="width: 15%">Registration</a>
+        <a class="login" href="assignment_portal/load_teacher_login_form" target="_blank">Login</a>
+    </div>
+
+    <div id="std">
+        <span>If you are a student then go through the below options.</span>
+    </div>
+    <div style="margin: auto; text-align: center">
+        <a class="register" href="assignment_portal/load_student_registration_form" target="_blank" style="width: 15%">Registration</a>
+        <a class="login" href="assignment_portal/load_student_login_form" target="_blank">Login</a>
+    </div>
+
+    <div id="admin">
+        <span>If you are the ADMIN then go through the below options.</span>
+    </div>
+    <div style="margin: auto; text-align: center">
+        <a class="login" href="assignment_portal/load_admin_login_form" target="_blank">Login</a>
+    </div>
+</body>
+</html>

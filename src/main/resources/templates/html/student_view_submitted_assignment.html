@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>student_view_submitted_assignment</title>
+    <style>
+        body{
+            margin: 0;
+            background-image: linear-gradient(to right top, #000000, #13080e, #1c101a, #221627, #231d36, #281f3c, #2d2041, #322247, #411c3e, #4c1632, #511325, #511616);
+            background-size: 100% 100%;
+            background-color: black;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100%;
+        }
+        .heading{
+            color: #fa5353;
+        }
+
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            opacity: .8;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 8px;
+        }
+
+        tr{
+            border: 3px solid transparent;
+            background-color: whitesmoke;
+            margin: 10px;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        .table-design tr:hover {
+            background-color: #ddd;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1 class="heading">VIEW SUBMITTED ASSIGNMENT</h1>
+
+<table class="table-design">
+    <thead>
+    <tr>
+        <th>Assignment File</th>
+        <th>Comment</th>
+        <th>Delete</th>
+        <th>Suggestions / Reward / Mark</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="assignment : ${assignments}">
+        <td><a th:href="@{'/assignment_portal/student_assignment_file/' + ${assignment.assignment_id}}" target="_blank" th:text="'View ' + ${assignment.getAssignment_name()}"></a></td>
+        <td th:text="${assignment.comment}"></td>
+        <td><a th:href="@{'/assignment_portal/std_delete_submitted_assignment/' + ${assignment.assignment_id}}" th:text="Delete"></a></td>
+        <td th:text="${assignment.mark}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,76 @@
+package com.iserveu.cms.pojo;
+
+public class Utility {
+	public static final String GIFT = "gift";
+	public static final String PREPAID = "PREPAID";
+	public static final String MAGSTRIPE = "MagStripe";
+	public static final String CHIP = "chip";
+	public static final String CONTACTLESS = "contactLess";
+	public static final String APPROVED = "APPROVED";
+	public static final String REJECTED = "REJECTED";
+	public static final String PENDING = "PENDING";
+	public static final String LOADCARD = "LOADCARD";
+	public static final String PROGRAMMANAGER = "PROGRAM_MANAGER";
+	public static final String CORPORATE = "CORPORATE";
+	public static final String SUCCESS = "SUCCESS";
+	public static final String FAILED = "FAILED";
+	public static final String CARDORDER = "CARD_ORDER";
+	public static final String DATABASEEXCEPTION = "Exception Occurs in database !! Try again !!";
+	public static final String PHYSICALCARDORDER = "PHYSICAL_CARD_ORDER";
+	public static final String VIRTUALCARDORDER = "VIRTUAL_CARD_ORDER";
+	public static final String CORPORATEID = "corporateId";
+	public static final String CORPORATEWALLETID = "corporateWalletId";
+	public static final String ERRORGRPCCONNECTION = "Error in GRPC service:  Unable to connect";
+	public static final String ERROR=",Error is: ";
+	public static final String SUCCESSFULLY = "Successfully fetched";
+	public static final String MINLIMIT = "minLimit";
+	public static final String MAXLIMIT = "maxLimit";
+	public static final String TRANSCATIONID = "transactionId";
+	public static final String TRANSCATIONTYPE = "transactionType";
+	public static final String AMOUNT = "amount";
+	public static final String CARDWALLETID = "cardWalletId";
+	public static final String CARDREFID = "cardRefId";
+	public static final String MINIMUMBALANCE = "minimumBalance";
+	public static final String MAXMUMBALANCE = "maximumBalance";
+	public static final String REFUNDSTATUSCODE = "refundStatusCode";
+	public static final String GATEWAYTRANSCATIONID = "gatewayTransactionId";
+	public static final String DATABASEEXCEPTIONOCCURS ="Exception occurred while fetching card details, Kindly try again !";
+	public static final String SUCCESSFUL="SUCCESSFUL";
+	public static final String ENCRYPTEDCARDNUMBER ="ENCRYPTEDCARDNUMBER";
+	public static final String AUTHTAG ="AUTHTAG";
+	public static final String IV ="IV";
+	public static final String OTPERROROCCURS ="Error while fetching OTP details";
+	public static final String CARDNOTMAPPEDTOANYPRODUCT ="Card Not Mapped to any product";
+	public static final String TPKUNDERTMK ="tpkUnderTMK";
+	public static final String TPKUNDERLMK ="tpkUnderLmk";
+	public static final String BINRANGE =" & binRange :";
+	public static final String LINKCARD =" :: Link Card";
+	public static final String PRODUCT ="Product :";
+	public static final String STARTDATE ="Start Date : " ;
+	public static final String ENDDATE = "End Date : ";
+	public static final String EXCEPTIONINGRPC = "Exception at GRPC service: ";
+	public static final String STATUS ="Status : ";
+	public static final String MINKYC ="MIN-KYC";
+	public static final String FULLKYC ="FULL-KYC";
+	public static final Double MINKYCAMOUNT = 10000.00;
+	public static final Double FULLKYCAMOUNT = 200000.00;
+	public static final String SECRETKEY ="SecretKey";
+	public static final String IP ="ip";
+	public static final String PORT ="port";
+	public static final String PASSWORD ="password";
+	public static final String USERNAME ="username";
+	public static final String EXCEPTIONOCCURRED=" Exception Occurred...";
+
+	public static final String CUSTADMIN="CUST_ADMIN";
+
+
+
+
+
+
+
+
+
+
+
+}
