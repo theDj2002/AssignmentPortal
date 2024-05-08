@@ -60,7 +60,7 @@
         </thead>
         <tbody>
         <tr th:each="assignment : ${teacherAssignmentList}">
-            <td><a th:href="@{'/assignment_portal/teacher_assignment_file/' + ${assignment.assignment_id}}" target="_blank" th:text="'View ' + ${assignment.getAssignment_name()}"></a></td>
+            <td><a th:href="@{'/assignment_portal/teacher_assignment_file/' + ${assignment.assignment_id}}" target="_blank" th:text="'View' + ${assignment.getAssignment_name()}"></a></td>
             <td th:text="${assignment.comment}"></td>
             <td><a th:href="@{'/assignment_portal/delete_uploaded_assignment/' + ${assignment.assignment_id}}" th:text="Delete"></a></td>
         </tr>
